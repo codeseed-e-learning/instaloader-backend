@@ -2,3 +2,4 @@ Flask==2.3.3
 Flask-Cors==4.0.0
 yt-dlp==2024.04.09
 requests==2.31.0
+gunicorn
