@@ -9,11 +9,14 @@ from threading import Thread
 from time import sleep
 
 app = Flask(__name__)
-CORS(app, origins=["*"])
+CORS(app)
 
 DOWNLOAD_DIR = "temp_downloads"
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
+@app.route('/')
+def index():
+    return jsonify({"message": "Welcome to the Instagram Reel Downloader API!"})
    
 @app.route('/get-reel-thumbnail', methods=['POST'])
 def get_thumbnail():
