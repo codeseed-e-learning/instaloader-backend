@@ -75,6 +75,7 @@ def download_reel():
         'outtmpl': filename_template,
         'format': 'mp4/best',
         'quiet': True,
+        'cookiefile': 'instagram_cookies.txt' 
     }
 
     try:
